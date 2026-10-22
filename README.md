@@ -20,7 +20,9 @@
 
 AgentReel is an autonomous, end-to-end multi-agent video production system designed to translate a high-level creative brief into a fully synthesized, broadcast-ready vertical video (9:16 aspect ratio, 1080×1920, H.264/AAC, 30 fps) with synchronized voiceover narration and frame-accurate burned-in SubRip captions.
 
-### Seven-Agent Directed Acyclic Graph (DAG)
+### Seven-Agent Orchestration Pipeline with Bounded Repair Loop
+
+The system operates as a feedforward multi-stage pipeline whose linear execution graph is augmented with an automated quality-control feedback loop managed by the Critic agent:
 
 ```
 [ briefs/practice.yaml ] + [ data/ Source Documents ]
@@ -66,21 +68,29 @@ Final Deliverables (outputs/final_video_v3.mp4 & AgentReel_Final.srt)
 ```
 
 1. **Planner (`agents/planner.py`)**: Parses the input brief, validates runtime constraints (35–45s duration, vertical 9:16 layout), establishes stage budgets, and generates `outputs/plan.json`.
-2. **RAG Researcher (`agents/researcher.py`)**: Scans faculty-supplied sources in `data/` (PDF, Markdown, TXT) via PyMuPDF. Extracts grounded statements with exact citations. If no files are present, restricts facts to brief-supplied claims without hallucinating. Produces `outputs/facts.json`.
+2. **RAG Researcher (`agents/researcher.py`)**: Scans faculty-supplied sources in `data/` (PDF, Markdown, TXT) via PyMuPDF. Extracts grounded statements with exact citations. When `data/` contains no external documents (as in the starter environment), it restricts claims strictly to brief statements (`B1`, `B2`) without hallucinating. Produces `outputs/facts.json`.
 3. **Scriptwriter (`agents/scriptwriter.py`)**: Synthesizes a hook, core narrative, and call to action (CTA). Verifies fact IDs against `outputs/facts.json` and generates `outputs/script.json` and `outputs/script.md`.
-4. **Storyboarder (`agents/storyboarder.py`)**: Translates script segments into 6–10 structured visual shots with composition directives, timing, and on-screen text constraints (1–80 chars). Produces `outputs/storyboard.json`.
+4. **Storyboarder (`agents/storyboarder.py`)**: Translates script segments into structured visual shots with composition directives, timing, and on-screen text constraints (1–80 chars). Produces `outputs/storyboard.json`.
 5. **Asset Generator (`agents/asset_generator.py`)**: Programmatically renders 1080×1920 high-contrast visual cards and typography using Pillow. Produces `outputs/asset_manifest.json` and PNG frames.
 6. **Timeline Editor (`agents/editor.py`)**: Compiles a non-linear edit (NLE) timeline assembling video (V1), narration audio (A1), and captions (T1) into `outputs/edit_plan.json`.
 7. **Critic & QA Validator (`agents/critic.py`)**: Evaluates the entire project across 18 automated rules (timing bounds, character limits, asset integrity, claim grounding, LLM safety). Issues are categorized as `hard`, `factual`, or `soft`. If repairable hard/factual issues exist, it triggers a bounded repair loop (max 3 iterations) restarting from the responsible stage. Produces `outputs/qa_report.json`.
 
 ---
 
-## 🤖 Autonomy Level & Human Interventions
+## 🤖 Autonomy & Execution Metrics
 
-- **Demonstrated Autonomy**: Full Autonomous Execution (Level 4 Agentic Workflow).
-- **Human Interventions**: Exactly **0 human interventions** occurred during automated pipeline execution.
-- **Audit Trail**: Verified in [`logs/interventions.md`](file:///Users/sanjeevanichaurasia/Downloads/agentreel-team/logs/interventions.md) and [`logs/run_log.jsonl`](file:///Users/sanjeevanichaurasia/Downloads/agentreel-team/logs/run_log.jsonl).
-- **Human-in-the-Loop Safeguard**: An optional `--require-review` flag is provided in `core/orchestrator.py` which halts execution with exit code `3` if faculty pre-approval is requested before rendering.
+- **Observed Autonomy**: Fully automated end-to-end execution. The pipeline executed from YAML input to final video without manual steering, ad-hoc prompt edits, or human intervention.
+- **Human Interventions**: Exactly **0 human interventions** recorded in [`logs/interventions.md`](file:///Users/sanjeevanichaurasia/Downloads/agentreel-team/logs/interventions.md) during automated runs.
+- **Human-in-the-Loop Safeguard**: An optional `--require-review` flag in `core/orchestrator.py` halts execution with exit code `3` if faculty pre-approval is requested before rendering.
+- **Audited Token Economics (Milestone B Run)**:
+  - Total LLM Calls: **9** (Groq `openai/gpt-oss-120b`).
+  - Total Prompt Tokens: **12,247** (12,024 agent calls + 223 smoke test).
+  - Total Completion Tokens: **4,604** (4,571 agent calls + 33 smoke test).
+  - Total Tokens: **16,851**.
+  - Cost Status: Recorded as `unknown` in `logs/cost_report.csv` because token prices were not configured; per project policy, costs are never guessed.
+- **Offline V3 Video Rendering**:
+  - Rendered locally via `scripts/render_v3.py` using Pillow and FFmpeg in 12.44s.
+  - Required **0 external API calls** and incurred **$0.00 cloud cost**.
 
 ---
 
@@ -157,7 +167,7 @@ python -m pytest tests/ -q --ignore=tests/test_e2e_local_server.py
 | **Cost Report** | `logs/cost_report.csv` | Exact prompt and completion token counts per agent invocation |
 | **Interventions** | `logs/interventions.md` | Human approval log (verified: 0 interventions) |
 | **Asset Manifest** | `assets/manifest.csv` | Full licensing and provenance audit for all media assets |
-| **Agent DAG Graph** | `docs/agent_graph.png` | Visual DAG architecture diagram (1920×1200) |
+| **Architecture Diagram** | `docs/agent_graph.png` | Seven-agent orchestration pipeline with bounded repair loop (2000×1250) |
 | **Process Report (PDF)** | `docs/process_report.pdf` | Concise 2-page academic report per challenge guidelines |
 | **Comprehensive Report**| `AgentReel_Final_Report.pdf` | 7-page exhaustive engineering and architectural report |
 | **Prompt Templates** | `prompts/` | Prompt templates for Planner, Researcher, Scriptwriter, Storyboarder, Critic |

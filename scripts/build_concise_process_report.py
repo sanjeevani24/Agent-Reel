@@ -112,9 +112,9 @@ def build_pdf():
     rect1 = fitz.Rect(36, y+8, 559.32, y+110)
     page1.insert_textbox(rect1, body1, fontsize=8.0, fontname="helv", fontfile=FONT_REG, color=NAVY, lineheight=1.2)
 
-    # Section 2: Seven-Agent Directed Acyclic Graph (DAG)
+    # Section 2: Seven-Agent Orchestration Pipeline with Bounded Repair Loop
     y = 295
-    page1.insert_text(fitz.Point(36, y), "2. Seven-Agent Directed Acyclic Graph (DAG) Architecture", fontsize=11, fontname="helv", fontfile=FONT_BOLD, color=NAVY)
+    page1.insert_text(fitz.Point(36, y), "2. Seven-Agent Orchestration Pipeline with Bounded Repair Loop", fontsize=11, fontname="helv", fontfile=FONT_BOLD, color=NAVY)
     page1.draw_line(fitz.Point(36, y+3), fitz.Point(559.32, y+3), color=BLUE, width=1.5)
     
     diag_rect = fitz.Rect(36, y+10, 559.32, y+135)
@@ -182,14 +182,16 @@ def build_pdf():
         ("Script Repair", "groq: openai/gpt-oss-120b", "2.38s", "2,395", "1,053", "unknown (free tier)"),
         ("Storyboard Repair", "groq: openai/gpt-oss-120b", "2.86s", "2,428", "766", "unknown (free tier)"),
         ("Critic Verification", "groq: openai/gpt-oss-120b", "1.15s", "1,275", "86", "unknown (free tier)"),
+        ("Audited Total", "9 Calls (openai/gpt-oss-120b)", "15.96s", "12,247", "4,604", "$0.00 (free tier)"),
     ]
     row_y = y_table2 + 16
     for r_idx, r in enumerate(metrics_rows):
-        bg = LIGHT_BG if r_idx % 2 == 0 else WHITE
+        is_total = (r_idx == len(metrics_rows) - 1)
+        bg = AMBER_BG if is_total else (LIGHT_BG if r_idx % 2 == 0 else WHITE)
         page2.draw_rect(fitz.Rect(36, row_y, 559.32, row_y + 14), color=BORDER, fill=bg, width=0.5)
         cur_x = 36
         for i, val in enumerate(r):
-            page2.insert_text(fitz.Point(cur_x + 5, row_y + 10.5), val, fontsize=7.0, fontname="helv", fontfile=FONT_REG, color=NAVY)
+            page2.insert_text(fitz.Point(cur_x + 5, row_y + 10.5), val, fontsize=7.0, fontname="helv", fontfile=FONT_BOLD if is_total else FONT_REG, color=NAVY)
             cur_x += col_w2[i]
         row_y += 14
 

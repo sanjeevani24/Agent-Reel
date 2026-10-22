@@ -20,7 +20,7 @@ def create_agent_graph(output_path="docs/agent_graph.png"):
         draw.line([(0, y), (W, y)], fill=(22, 27, 34, 150), width=1)
 
     draw.rounded_rectangle([(40, 30), (W - 40, 140)], radius=16, fill=(21, 27, 38, 255), outline=(56, 189, 248, 120), width=2)
-    draw.text((70, 48), "AGENTREEL: 7-AGENT DIRECTED ACYCLIC GRAPH (DAG) ARCHITECTURE", fill=(248, 250, 252), font=title_font)
+    draw.text((70, 48), "AGENTREEL: 7-AGENT ORCHESTRATION PIPELINE WITH REPAIR LOOP", fill=(248, 250, 252), font=title_font)
     draw.text((70, 96), "Autonomous Brief-to-Broadcast Video Production System with Multi-Track Synthesis & Bounded QA Repair Loop", fill=(148, 163, 184), font=sub_font)
     
     draw.rounded_rectangle([(W - 460, 52), (W - 70, 118)], radius=10, fill=(30, 41, 59, 255), outline=(100, 116, 139, 200), width=1)
@@ -124,7 +124,7 @@ def create_agent_graph(output_path="docs/agent_graph.png"):
     draw.rounded_rectangle([(990, 860), (1440, 1160)], radius=10, fill=(15, 23, 42), outline=(168, 85, 247, 100), width=1)
     draw.text((1015, 880), "TOKEN ECONOMICS & LATENCY", fill=(168, 85, 247), font=card_sub_font)
     draw.text((1015, 910), "Audited LLM & Local Metrics", fill=(248, 250, 252), font=card_title_font)
-    draw.text((1015, 950), "• Groq Model: openai/gpt-oss-120b\n• Prompt Tokens: 10,723 (Milestone B)\n• Completion Tokens: 4,142\n• Average Agent Latency: 1.1s\n• Offline V3 Render Time: 12.44s", fill=(148, 163, 184), font=card_sub_font)
+    draw.text((1015, 950), "• Groq Model: openai/gpt-oss-120b\n• Prompt Tokens: 12,247 (Audited Total)\n• Completion Tokens: 4,604\n• Total LLM Calls: 9 (0 Interventions)\n• Offline V3 Render Time: 12.44s", fill=(148, 163, 184), font=card_sub_font)
 
     draw.rounded_rectangle([(1470, 860), (W - 70, 1160)], radius=10, fill=(15, 23, 42), outline=(16, 185, 129, 100), width=1)
     draw.text((1495, 880), "BROADCAST COMPLIANCE", fill=(16, 185, 129), font=card_sub_font)
