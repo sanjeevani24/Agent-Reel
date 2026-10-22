@@ -1,0 +1,68 @@
+{
+  "topic": "From Prompt to Product: How 7 AI Agents Build a Video",
+  "version": "v3",
+  "status": "SUCCESS",
+  "duration_seconds": 44.02,
+  "target_duration_seconds": 44.0,
+  "resolution": "1080x1920",
+  "aspect_ratio": "9:16",
+  "fps": 30,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": 48000,
+  "audio_channels": 2,
+  "file_size_bytes": 2316562,
+  "file_size_mb": 2.21,
+  "render_time_seconds": 12.44,
+  "scenes_count": 5,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "title": "Scene 1: The Prompt",
+      "duration_seconds": 5.5,
+      "narration": "Every AgentReel video begins with a single prompt: vision, topic, and audience.",
+      "caption": "Every AgentReel video begins with a single prompt: vision, topic, and audience."
+    },
+    {
+      "scene_id": 2,
+      "title": "Scene 2: The 7 AI Agents Workflow",
+      "duration_seconds": 16.5,
+      "narration": "In our pipeline, seven specialized agents coordinate: Planner sets the plan, Researcher checks facts, Scriptwriter writes the story, Storyboarder designs shots, Asset Generator creates visuals, Editor builds the edit, and Critic verifies quality.",
+      "caption": "In our pipeline, seven specialized agents coordinate: Planner, Researcher, Scriptwriter, Storyboarder, Asset Generator, Editor, and Critic."
+    },
+    {
+      "scene_id": 3,
+      "title": "Scene 3: Multi-Track Timeline Assembly",
+      "duration_seconds": 8.0,
+      "narration": "Next, multiple media tracks assemble in lockstep: visual cards, voiceover audio, and burned SubRip captions.",
+      "caption": "Multiple media tracks assemble in lockstep: visual cards, voiceover audio, and SubRip captions."
+    },
+    {
+      "scene_id": 4,
+      "title": "Scene 4: Critic QA HUD & Repair Loop",
+      "duration_seconds": 8.0,
+      "narration": "Before delivery, the Critic inspects eighteen quality rules. Any caption violation triggers an automated repair loop.",
+      "caption": "Critic inspects 18 rules. Any caption violation triggers an automated repair loop."
+    },
+    {
+      "scene_id": 5,
+      "title": "Scene 5: Final Video Reveal & Call to Action",
+      "duration_seconds": 6.0,
+      "narration": "The result is a broadcast-ready vertical video, built by AI agents. Come and build with us.",
+      "caption": "The result is a broadcast-ready vertical video, built by AI agents. Come and build with us."
+    }
+  ],
+  "outputs": {
+    "video": "final_video_v3.mp4",
+    "subtitles": "subtitles_v3.srt",
+    "previews": [
+      "preview_v3_1.png",
+      "preview_v3_2.png",
+      "preview_v3_3.png",
+      "preview_v3_4.png",
+      "preview_v3_5.png"
+    ]
+  },
+  "cta": "Come and build with us.",
+  "disclosure": "Created with AI agents \u2014 LY Agentic AI Lab"
+}

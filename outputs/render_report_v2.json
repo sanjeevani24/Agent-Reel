@@ -1,0 +1,67 @@
+{
+  "topic": "From Prompt to Product: How 7 AI Agents Build a Video",
+  "status": "SUCCESS",
+  "duration_seconds": 43.02,
+  "target_duration_seconds": 43.0,
+  "resolution": "1080x1920",
+  "aspect_ratio": "9:16",
+  "fps": 30,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_sample_rate": 48000,
+  "audio_channels": 2,
+  "file_size_bytes": 2868943,
+  "file_size_mb": 2.74,
+  "render_time_seconds": 12.11,
+  "scenes_count": 5,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "title": "Scene 1: The Prompt",
+      "duration_seconds": 4.5,
+      "narration": "Every AgentReel video begins with a single prompt: your vision, your topic, and your target audience.",
+      "caption": "Every AgentReel video begins with a single prompt: your vision, your topic, and your target audience."
+    },
+    {
+      "scene_id": 2,
+      "title": "Scene 2: The 7 AI Agents Workflow",
+      "duration_seconds": 15.5,
+      "narration": "Seven autonomous agents take the stage: the Planner structures the workflow, the Researcher retrieves verified facts, the Scriptwriter crafts timed spoken narrative, the Storyboarder maps scenes, the Asset Generator creates Pillow visuals, the Editor cuts the timeline, and the Critic enforces eighteen rigorous QA checks.",
+      "caption": "Seven autonomous agents: Planner, Researcher, Scriptwriter, Storyboarder, Asset Generator, Editor, and Critic."
+    },
+    {
+      "scene_id": 3,
+      "title": "Scene 3: Multi-Track Timeline Assembly",
+      "duration_seconds": 8.5,
+      "narration": "Next, the Asset Generator and Editor assemble multiple media tracks into lockstep: visual layers, crisp voiceover audio, and burned SubRip captions.",
+      "caption": "Visual cards, spoken audio, and SubRip captions assembled in lockstep."
+    },
+    {
+      "scene_id": 4,
+      "title": "Scene 4: Critic QA HUD & Repair Loop",
+      "duration_seconds": 8.5,
+      "narration": "Before final delivery, the Critic inspects eighteen quality rules. If any caption exceeds forty characters, a repair loop triggers automatically until every check passes.",
+      "caption": "Critic inspects 18 rules. Any violation triggers an automated repair loop."
+    },
+    {
+      "scene_id": 5,
+      "title": "Scene 5: Final Video Reveal & Call to Action",
+      "duration_seconds": 6.0,
+      "narration": "The result is a broadcast-ready vertical video built entirely by autonomous AI agents. Come and build with us.",
+      "caption": "The result is a broadcast-ready vertical video built by AI agents. Come and build with us."
+    }
+  ],
+  "outputs": {
+    "video": "final_video_v2.mp4",
+    "subtitles": "subtitles_v2.srt",
+    "previews": [
+      "preview_v2_1.png",
+      "preview_v2_2.png",
+      "preview_v2_3.png",
+      "preview_v2_4.png",
+      "preview_v2_5.png"
+    ]
+  },
+  "cta": "Come and build with us.",
+  "disclosure": "Created with AI agents \u2014 LY Agentic AI Lab"
+}

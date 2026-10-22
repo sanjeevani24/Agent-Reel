@@ -1,0 +1,319 @@
+{
+  "brief_id": "P00",
+  "iteration": 0,
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "script duration",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "script timeline",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "segment timing fit",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "fact ids exist",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "claims grounded in facts",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "no invented numbers/contacts",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "LLM claim review",
+      "passed": false,
+      "severity": "factual",
+      "detail": "Unsupported claim in seg1: 'Ever wonder how tomorrow’s AI is built, right here in a single day?' (Makes a specific claim about building tomorrow's AI in a single day, which is not supported by the provided facts.); Unsupported claim in seg2: 'students gathering around bright screens, sketching agents that can talk to each other' (Describes a specific student activity (sketching talking agents) not"
+    },
+    {
+      "name": "LLM safety review",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "shot count 6-10",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "segments covered by shots",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "storyboard duration",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "on-screen text length",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "disclosure line",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "assets exist",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "assets valid",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "edit plan ready",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "no false video claim",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "official sources present",
+      "passed": false,
+      "severity": "soft",
+      "detail": "No official source documents were supplied; only brief-provided statements could be used as facts."
+    }
+  ],
+  "issues": [
+    {
+      "code": "SOURCES_ABSENT",
+      "severity": "soft",
+      "stage": "researcher",
+      "message": "No official source documents were supplied; only brief-provided statements could be used as facts.",
+      "fix_hint": "Add faculty documents to data/ and re-run.",
+      "repairable": false,
+      "location": ""
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "scriptwriter",
+      "message": "Unsupported claim in seg1: 'Ever wonder how tomorrow’s AI is built, right here in a single day?' (Makes a specific claim about building tomorrow's AI in a single day, which is not supported by the provided facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "seg1"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "scriptwriter",
+      "message": "Unsupported claim in seg2: 'students gathering around bright screens, sketching agents that can talk to each other' (Describes a specific student activity (sketching talking agents) not covered by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "seg2"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "scriptwriter",
+      "message": "Unsupported claim in seg5: 'Midday brings hardware prototypes, where robots and sensors meet the agents they control' (Claims the presence of hardware prototypes and robots interacting with agents, unsupported by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "seg5"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "scriptwriter",
+      "message": "Unsupported claim in seg6: 'Teams run simulations, watch agents negotiate, and celebrate each breakthrough together' (States that teams run simulations and observe negotiations, which is not substantiated by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "seg6"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "scriptwriter",
+      "message": "Unsupported claim in seg7: 'Afternoon wraps with quick demos, feedback loops, and plans for the next iteration' (Mentions demos, feedback loops, and planning for next iteration, none of which are supported by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "seg7"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S01: 'Ever wonder how tomorrow’s AI is built?' (Repeats the unsupported claim about building tomorrow's AI.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S01"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S02: 'Morning: students sketch talking agents' (Claims students sketch talking agents, not supported by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S02"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S03: 'They code multi‑agent AI systems' (While B1 states students build working multi‑agent AI systems, this phrasing implies a specific activity not directly cited; however B1 covers building, so this is considered supported and not flagged.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S03"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S04: 'Live testing, bugs chased instantly' (Implies real‑time testing and bug fixing, which is not covered by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S04"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S05: 'Hardware prototypes meet AI agents' (Claims hardware prototypes interacting with AI agents, unsupported.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S05"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S06: 'Simulations, negotiations, celebrations' (Describes simulations and negotiations, not supported by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S06"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S07: 'Afternoon demos and feedback loops' (Mentions demos and feedback loops, unsupported by the facts.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S07"
+    },
+    {
+      "code": "LLM_UNSUPPORTED_CLAIM",
+      "severity": "factual",
+      "stage": "storyboarder",
+      "message": "Unsupported claim in S08: 'Come and build with us.' (Generic invitation, not a factual claim; no need to flag.)",
+      "fix_hint": "Remove it or rephrase using only the supplied facts.",
+      "repairable": true,
+      "location": "S08"
+    }
+  ],
+  "human_review_required": false,
+  "llm_review": {
+    "unsupported_claims": [
+      {
+        "location": "seg1",
+        "text": "Ever wonder how tomorrow’s AI is built, right here in a single day?",
+        "reason": "Makes a specific claim about building tomorrow's AI in a single day, which is not supported by the provided facts."
+      },
+      {
+        "location": "seg2",
+        "text": "students gathering around bright screens, sketching agents that can talk to each other",
+        "reason": "Describes a specific student activity (sketching talking agents) not covered by the facts."
+      },
+      {
+        "location": "seg5",
+        "text": "Midday brings hardware prototypes, where robots and sensors meet the agents they control",
+        "reason": "Claims the presence of hardware prototypes and robots interacting with agents, unsupported by the facts."
+      },
+      {
+        "location": "seg6",
+        "text": "Teams run simulations, watch agents negotiate, and celebrate each breakthrough together",
+        "reason": "States that teams run simulations and observe negotiations, which is not substantiated by the facts."
+      },
+      {
+        "location": "seg7",
+        "text": "Afternoon wraps with quick demos, feedback loops, and plans for the next iteration",
+        "reason": "Mentions demos, feedback loops, and planning for next iteration, none of which are supported by the facts."
+      },
+      {
+        "location": "S01",
+        "text": "Ever wonder how tomorrow’s AI is built?",
+        "reason": "Repeats the unsupported claim about building tomorrow's AI."
+      },
+      {
+        "location": "S02",
+        "text": "Morning: students sketch talking agents",
+        "reason": "Claims students sketch talking agents, not supported by the facts."
+      },
+      {
+        "location": "S03",
+        "text": "They code multi‑agent AI systems",
+        "reason": "While B1 states students build working multi‑agent AI systems, this phrasing implies a specific activity not directly cited; however B1 covers building, so this is considered supported and not flagged."
+      },
+      {
+        "location": "S04",
+        "text": "Live testing, bugs chased instantly",
+        "reason": "Implies real‑time testing and bug fixing, which is not covered by the facts."
+      },
+      {
+        "location": "S05",
+        "text": "Hardware prototypes meet AI agents",
+        "reason": "Claims hardware prototypes interacting with AI agents, unsupported."
+      },
+      {
+        "location": "S06",
+        "text": "Simulations, negotiations, celebrations",
+        "reason": "Describes simulations and negotiations, not supported by the facts."
+      },
+      {
+        "location": "S07",
+        "text": "Afternoon demos and feedback loops",
+        "reason": "Mentions demos and feedback loops, unsupported by the facts."
+      },
+      {
+        "location": "S08",
+        "text": "Come and build with us.",
+        "reason": "Generic invitation, not a factual claim; no need to flag."
+      }
+    ],
+    "safety_concerns": [],
+    "notes": "Multiple narrative elements describe activities not covered by the supplied facts."
+  },
+  "summary": "13 blocking issue(s), 1 warning(s).",
+  "repairs_used": 0,
+  "repair_history": [],
+  "final": false
+}

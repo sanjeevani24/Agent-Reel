@@ -1,0 +1,101 @@
+{
+  "brief_id": "P00",
+  "title": "A day at the Agentic AI Lab",
+  "seed": 42,
+  "video": {
+    "duration_target_s": 40,
+    "min_duration_s": 35,
+    "max_duration_s": 45,
+    "aspect_ratio": "9:16",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "max_file_mb": 100,
+    "safe_top_px": 250,
+    "safe_bottom_px": 350
+  },
+  "stages": [
+    {
+      "name": "planner",
+      "max_seconds": 60,
+      "depends_on": [],
+      "purpose": "Turn the brief into a plan, budget and success criteria"
+    },
+    {
+      "name": "researcher",
+      "max_seconds": 120,
+      "depends_on": [
+        "planner"
+      ],
+      "purpose": "Extract source-grounded facts from data/"
+    },
+    {
+      "name": "scriptwriter",
+      "max_seconds": 90,
+      "depends_on": [
+        "researcher"
+      ],
+      "purpose": "Write the timed script using only supported facts"
+    },
+    {
+      "name": "storyboarder",
+      "max_seconds": 90,
+      "depends_on": [
+        "scriptwriter"
+      ],
+      "purpose": "Turn the script into 6-10 shots"
+    },
+    {
+      "name": "asset_generator",
+      "max_seconds": 120,
+      "depends_on": [
+        "storyboarder"
+      ],
+      "purpose": "Create assets and the asset manifest"
+    },
+    {
+      "name": "editor",
+      "max_seconds": 60,
+      "depends_on": [
+        "storyboarder",
+        "asset_generator"
+      ],
+      "purpose": "Validate inputs and prepare the edit plan"
+    },
+    {
+      "name": "critic",
+      "max_seconds": 90,
+      "depends_on": [
+        "scriptwriter",
+        "storyboarder",
+        "asset_generator",
+        "editor"
+      ],
+      "purpose": "QA checks and targeted repair feedback"
+    }
+  ],
+  "success_criteria": [
+    "Video length is between 35 and 45 seconds as specified",
+    "Target audience (prospective and current engineering students) perceives the lab as energetic and friendly",
+    "Key messages are clearly presented: students build working multi‑agent AI systems and learn by building, testing and improving",
+    "Call to action “Come and build with us” is displayed prominently before the end",
+    "Visuals and narration are in English and maintain a clear, energetic tone throughout",
+    "Disclosure line “Created with AI agents — LY Agentic AI Lab” appears on screen",
+    "No unsupported statistics or invented contact details appear"
+  ],
+  "creative_direction": "Fast‑paced, kinetic montage style with bright, high‑contrast colors and dynamic camera moves that follow students as they code, prototype hardware, and test agents. Quick cuts sync to an upbeat soundtrack, interspersed with on‑screen kinetic typography highlighting the key messages, all framed for vertical 9:16 viewing. The tone stays energetic, friendly, and clearly narrated to guide viewers through a day in the lab.",
+  "risk_notes": [
+    "No specific visual assets or footage list provided – ensure appropriate stock or captured material is sourced",
+    "No explicit branding guidelines given – avoid adding any institutional logos or colors not confirmed in the brief",
+    "If no disclosure line template is supplied, verify exact wording and placement to meet compliance"
+  ],
+  "cost_budget": {
+    "max_llm_calls": 30,
+    "max_total_tokens": 250000,
+    "max_repair_loops": 3,
+    "cost_note": "USD cost is 'unknown' unless LLM_PRICE_IN_PER_M / LLM_PRICE_OUT_PER_M are set; the budget is therefore enforced on calls and tokens."
+  },
+  "human_review_required": false
+}

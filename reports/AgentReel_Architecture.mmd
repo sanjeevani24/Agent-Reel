@@ -1,0 +1,89 @@
+flowchart TD
+    %% Styling
+    classDef inputStyle fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#f8fafc;
+    classDef agentStyle fill:#0f172a,stroke:#3b82f6,stroke-width:2px,color:#f8fafc;
+    classDef artifactStyle fill:#1e293b,stroke:#10b981,stroke-width:1px,color:#6ee7b7;
+    classDef criticStyle fill:#3b0a1a,stroke:#ef4444,stroke-width:2px,color:#fca5a5;
+    classDef outputStyle fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#f8fafc;
+    classDef loopStyle fill:#450a0a,stroke:#f59e0b,stroke-width:2px,stroke-dasharray: 5 5,color:#fbbf24;
+
+    subgraph Inputs ["Input Specification"]
+        Brief["User Brief: briefs/practice.yaml\n(Title, Audience, Tone, Duration, CTA)"]:::inputStyle
+        DataDir["Optional Source Docs: data/\n(Verified PDFs, MD, TXT)"]:::inputStyle
+    end
+
+    subgraph Orchestration ["Core Multi-Agent Orchestrator (core/orchestrator.py)"]
+        direction TB
+
+        subgraph S1 ["1. Planning Stage"]
+            Planner["Agent 1: Planner\n(Decomposes brief into stages & limits)"]:::agentStyle
+            PlanJSON[("outputs/plan.json\n(Budget, constraints, target specs)")]:::artifactStyle
+            Planner --> PlanJSON
+        end
+
+        subgraph S2 ["2. Grounded Fact Retrieval"]
+            Researcher["Agent 2: RAG Researcher\n(Extracts & verifies verbatim quotes)"]:::agentStyle
+            FactsJSON[("outputs/facts.json\n(Verified facts & source citations)")]:::artifactStyle
+            Researcher --> FactsJSON
+        end
+
+        subgraph S3 ["3. Spoken Narrative Generation"]
+            Scriptwriter["Agent 3: Scriptwriter\n(Crafts timed spoken narrative)"]:::agentStyle
+            ScriptJSON[("outputs/script.json & script.md\n(Hook, body, CTA segments)")]:::artifactStyle
+            Scriptwriter --> ScriptJSON
+        end
+
+        subgraph S4 ["4. Visual Shot Design"]
+            Storyboarder["Agent 4: Storyboarder\n(Plans visual actions & captions)"]:::agentStyle
+            StoryJSON[("outputs/storyboard.json\n(6-10 shots, on-screen text)")]:::artifactStyle
+            Storyboarder --> StoryJSON
+        end
+
+        subgraph S5 ["5. Procedural Graphics Generation"]
+            AssetGen["Agent 5: Asset Generator / Motion Engine\n(Pillow procedural gradient cards & safe zones)"]:::agentStyle
+            ManifestJSON[("outputs/asset_manifest.json\n(1080x1920 RGBA frames)")]:::artifactStyle
+            AssetGen --> ManifestJSON
+        end
+
+        subgraph S6 ["6. Multi-Track Timeline Assembly"]
+            Editor["Agent 6: Timeline Editor / Renderer\n(Audio synthesis, track sync & muxing)"]:::agentStyle
+            EditPlanJSON[("outputs/edit_plan.json\n(NLE timeline: V1, A1, T1)")]:::artifactStyle
+            Editor --> EditPlanJSON
+        end
+
+        subgraph S7 ["7. Quality Assurance & Guardrails"]
+            Critic["Agent 7: Critic & QA Validator\n(18 automated checks + claim grounding)"]:::criticStyle
+            QAReport[("outputs/qa_report.json\n(Hard, soft, & factual issues)")]:::artifactStyle
+            Critic --> QAReport
+        end
+
+        %% Sequential pipeline dependencies
+        Brief --> Planner
+        DataDir --> Researcher
+        PlanJSON --> Researcher
+        FactsJSON --> Scriptwriter
+        PlanJSON --> Scriptwriter
+        ScriptJSON --> Storyboarder
+        StoryJSON --> AssetGen
+        ManifestJSON --> Editor
+        EditPlanJSON --> Critic
+
+        %% Targeted repair feedback loop
+        RepairLoop{"Targeted Repair Loop\n(Max 3 iterations)"}:::loopStyle
+        QAReport -->|FAIL: Issues Flagged| RepairLoop
+        RepairLoop -.->|Factual/Claim Issue| Scriptwriter
+        RepairLoop -.->|Caption/Shot Issue| Storyboarder
+        RepairLoop -.->|Asset Missing Issue| AssetGen
+    end
+
+    subgraph Deliverables ["Final Deliverables (outputs/)"]
+        VideoOutput["outputs/final_video_v3.mp4\n(1080x1920 | 30 fps | H.264/AAC | 44.02s)"]:::outputStyle
+        SRTOutput["outputs/AgentReel_Final.srt\n(6 timed SubRip caption blocks)"]:::outputStyle
+        ReportOutput["outputs/render_report_v3.json\n(Validated metrics & scene manifests)"]:::outputStyle
+        LogOutput["logs/run_log.jsonl & cost_report.csv\n(Audited token metrics & execution trace)"]:::outputStyle
+
+        QAReport -->|PASS / PASS_WITH_WARNINGS| VideoOutput
+        QAReport --> SRTOutput
+        QAReport --> ReportOutput
+        QAReport --> LogOutput
+    end

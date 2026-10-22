@@ -1,0 +1,10 @@
+timestamp,run_id,agent,provider,model,prompt_tokens,completion_tokens,cost_usd,cost_status
+2026-10-21T10:00:28.712+00:00,run_20261021_153027,smoke_test,groq,openai/gpt-oss-120b,223,33,unknown,unknown
+2026-10-21T11:29:24.387+00:00,run_20261021_165923,planner,groq,openai/gpt-oss-120b,836,297,unknown,unknown
+2026-10-21T11:29:25.514+00:00,run_20261021_165923,planner,groq,openai/gpt-oss-120b,1194,292,unknown,unknown
+2026-10-21T11:29:27.255+00:00,run_20261021_165923,scriptwriter,groq,openai/gpt-oss-120b,1354,662,unknown,unknown
+2026-10-21T11:29:29.260+00:00,run_20261021_165923,storyboarder,groq,openai/gpt-oss-120b,1280,738,unknown,unknown
+2026-10-21T11:29:31.255+00:00,run_20261021_165923,critic,groq,openai/gpt-oss-120b,1262,677,unknown,unknown
+2026-10-21T11:29:55.078+00:00,run_20261021_165923,scriptwriter,groq,openai/gpt-oss-120b,2395,1053,unknown,unknown
+2026-10-21T11:30:20.368+00:00,run_20261021_165923,storyboarder,groq,openai/gpt-oss-120b,2428,766,unknown,unknown
+2026-10-21T11:30:33.227+00:00,run_20261021_165923,critic,groq,openai/gpt-oss-120b,1275,86,unknown,unknown

@@ -1,0 +1,27 @@
+{
+  "official_sources_present": false,
+  "sources_scanned": [],
+  "passages_considered": 0,
+  "facts": [
+    {
+      "id": "B1",
+      "claim": "Students build working multi-agent AI systems.",
+      "origin": "brief",
+      "source_file": "brief:P00",
+      "locator": "key_messages[0]",
+      "quote": ""
+    },
+    {
+      "id": "B2",
+      "claim": "Learning happens by building, testing and improving.",
+      "origin": "brief",
+      "source_file": "brief:P00",
+      "locator": "key_messages[1]",
+      "quote": ""
+    }
+  ],
+  "rejected_claims": [],
+  "missing_info": [
+    "No official source documents found in data/. Institutional claims are limited to statements supplied by the brief; add the faculty documents and re-run."
+  ]
+}

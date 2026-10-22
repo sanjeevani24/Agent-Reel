@@ -1,0 +1,120 @@
+{
+  "output_spec": {
+    "container": "mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "max_file_mb": 100,
+    "target_duration_s": 40
+  },
+  "safe_zone_px": {
+    "top": 250,
+    "bottom": 350
+  },
+  "clips": [
+    {
+      "shot_id": "S01",
+      "start_s": 0.0,
+      "end_s": 5.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S01.png",
+      "caption_text": "Step inside the Agentic AI Lab and see a day of creation unfold.",
+      "narration": "Step inside the Agentic AI Lab and see a day of creation unfold.",
+      "motion": "slow_zoom_in",
+      "transition_in": "fade_in_0.3s"
+    },
+    {
+      "shot_id": "S02",
+      "start_s": 5.0,
+      "end_s": 10.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S02.png",
+      "caption_text": "Students collaborate at bright workstations, turning ideas into real…",
+      "narration": "Students collaborate at bright workstations, turning ideas into real multi‑agent AI projects.",
+      "motion": "slow_zoom_out",
+      "transition_in": "crossfade_0.4s"
+    },
+    {
+      "shot_id": "S03",
+      "start_s": 10.0,
+      "end_s": 15.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S03.png",
+      "caption_text": "Learning happens as they code, test, and continuously improve their agents.",
+      "narration": "Learning happens as they code, test, and continuously improve their agents.",
+      "motion": "pan_left",
+      "transition_in": "crossfade_0.4s"
+    },
+    {
+      "shot_id": "S04",
+      "start_s": 15.0,
+      "end_s": 20.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S04.png",
+      "caption_text": "Quick iterations spark fresh insights, and each test brings the system closer…",
+      "narration": "Quick iterations spark fresh insights, and each test brings the system closer to success.",
+      "motion": "pan_right",
+      "transition_in": "crossfade_0.4s"
+    },
+    {
+      "shot_id": "S05",
+      "start_s": 20.0,
+      "end_s": 25.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S05.png",
+      "caption_text": "The lab buzzes with energy, as ideas flow and teammates share feedback…",
+      "narration": "The lab buzzes with energy, as ideas flow and teammates share feedback instantly.",
+      "motion": "slow_zoom_in",
+      "transition_in": "crossfade_0.4s"
+    },
+    {
+      "shot_id": "S06",
+      "start_s": 25.0,
+      "end_s": 30.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S06.png",
+      "caption_text": "By the afternoon, prototypes are running, showcasing the power of coordinated…",
+      "narration": "By the afternoon, prototypes are running, showcasing the power of coordinated AI.",
+      "motion": "slow_zoom_out",
+      "transition_in": "crossfade_0.4s"
+    },
+    {
+      "shot_id": "S07",
+      "start_s": 30.0,
+      "end_s": 35.0,
+      "duration_s": 5.0,
+      "image_path": "assets/generated/P00/S07.png",
+      "caption_text": "Join us, build your own multi‑agent AI, and shape the future together.",
+      "narration": "Join us, build your own multi‑agent AI, and shape the future together.",
+      "motion": "pan_left",
+      "transition_in": "crossfade_0.4s"
+    }
+  ],
+  "subtitles": {
+    "status": "generated",
+    "srt_path": "outputs/subtitles.srt",
+    "burn_in": true
+  },
+  "voiceover": {
+    "status": "generated",
+    "path": "assets/generated/P00/voiceover.mp3"
+  },
+  "background_music": {
+    "status": "omitted",
+    "reason": "no licensed or original track available"
+  },
+  "end_card": {
+    "shot_id": "end_card",
+    "text": "Come and build with us.",
+    "disclosure_text": "Created with AI agents — LY Agentic AI Lab",
+    "image_path": "assets/generated/P00/end_card.png"
+  },
+  "disclosure_line": "Created with AI agents — LY Agentic AI Lab",
+  "render_status": "rendered",
+  "final_video_path": "outputs/final_video.mp4",
+  "ready_for_render": true,
+  "blockers": [],
+  "pending_assets": []
+}

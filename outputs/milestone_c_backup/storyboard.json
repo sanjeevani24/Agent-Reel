@@ -1,0 +1,135 @@
+{
+  "shots": [
+    {
+      "shot_id": "S01",
+      "start_s": 0.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg1"
+      ],
+      "visual_description": "Dynamic forward glide through a bright lab doorway, neon accents highlight the entrance; kinetic typography appears in the lower middle area, keeping top 250px and bottom 350px clear.",
+      "on_screen_text": "Step inside the Agentic AI Lab and see a day of creation unfold.",
+      "disclosure_text": "",
+      "narration": "Step inside the Agentic AI Lab and see a day of creation unfold.",
+      "asset_prompt": "Vertical 9:16 futuristic lab entrance with neon lighting, forward motion, space for lower-center text"
+    },
+    {
+      "shot_id": "S02",
+      "start_s": 5.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg2"
+      ],
+      "visual_description": "Wide shot of diverse students at vibrant workstations, screens glow with project diagrams; camera sweeps left‑right with subtle motion blur, text placed in lower third.",
+      "on_screen_text": "Students collaborate at bright workstations, turning ideas into real multi‑agent AI projects.",
+      "disclosure_text": "",
+      "narration": "Students collaborate at bright workstations, turning ideas into real multi‑agent AI projects.",
+      "asset_prompt": "Vertical view of diverse students at colorful computer stations, collaborative atmosphere, motion sweep"
+    },
+    {
+      "shot_id": "S03",
+      "start_s": 10.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg3"
+      ],
+      "visual_description": "Close‑up of hands typing rapidly, code lines scroll on monitors; overlay of simple agent icons moving between screens, subtle kinetic lines emphasize activity.",
+      "on_screen_text": "Learning happens as they code, test, and continuously improve their agents.",
+      "disclosure_text": "",
+      "narration": "Learning happens as they code, test, and continuously improve their agents.",
+      "asset_prompt": "Vertical close‑up of coding hands, scrolling code, animated agent icons, energetic visual cues"
+    },
+    {
+      "shot_id": "S04",
+      "start_s": 15.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg4"
+      ],
+      "visual_description": "Split view of a test console flashing green success signals, then a progress bar filling; camera tilts upward slightly, keeping central focus clear of text zones.",
+      "on_screen_text": "Quick iterations spark fresh insights, and each test brings the system closer to success.",
+      "disclosure_text": "",
+      "narration": "Quick iterations spark fresh insights, and each test brings the system closer to success.",
+      "asset_prompt": "Vertical split-screen of testing console with green indicators and progress bar, upward tilt"
+    },
+    {
+      "shot_id": "S05",
+      "start_s": 20.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg5"
+      ],
+      "visual_description": "Mid‑day lab table bustling with laptops, circuit boards, and small robot arms; overhead lights create lively reflections, camera circles gently around the scene.",
+      "on_screen_text": "The lab buzzes with energy, as ideas flow and teammates share feedback instantly.",
+      "disclosure_text": "",
+      "narration": "The lab buzzes with energy, as ideas flow and teammates share feedback instantly.",
+      "asset_prompt": "Vertical view of lab tabletop with laptops, electronics, robot arms, bright lighting, gentle circular camera motion"
+    },
+    {
+      "shot_id": "S06",
+      "start_s": 25.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg6"
+      ],
+      "visual_description": "Afternoon scene showing prototype interfaces running on screens, visualizations of coordinated AI actions; subtle glow highlights the running prototypes, text placed safely lower.",
+      "on_screen_text": "By the afternoon, prototypes are running, showcasing the power of coordinated AI.",
+      "disclosure_text": "",
+      "narration": "By the afternoon, prototypes are running, showcasing the power of coordinated AI.",
+      "asset_prompt": "Vertical afternoon lab view with running AI prototype dashboards, coordinated action visuals, soft glow"
+    },
+    {
+      "shot_id": "S07",
+      "start_s": 30.0,
+      "duration_s": 5.0,
+      "segment_ids": [
+        "seg7"
+      ],
+      "visual_description": "Closing shot pulls back to reveal the whole lab, lights dim slightly as a stylized AI brain graphic fades in center; kinetic typography slides up from bottom, respecting safe zones.",
+      "on_screen_text": "Join us, build your own multi‑agent AI, and shape the future together.",
+      "disclosure_text": "Created with AI agents — LY Agentic AI Lab",
+      "narration": "Join us, build your own multi‑agent AI, and shape the future together.",
+      "asset_prompt": "Vertical wide lab view with dimming lights, central glowing AI brain graphic, upward moving kinetic text"
+    }
+  ],
+  "total_duration_s": 35.0,
+  "target_duration_s": 40,
+  "issues": [
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S02: on-screen text must be 1-80 characters (is 93).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S02"
+    },
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S04: on-screen text must be 1-80 characters (is 89).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S04"
+    },
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S05: on-screen text must be 1-80 characters (is 81).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S05"
+    },
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S06: on-screen text must be 1-80 characters (is 81).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S06"
+    }
+  ]
+}

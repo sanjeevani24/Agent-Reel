@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:05,500
+Every AgentReel video begins with a single prompt: vision, topic, and audience.
+
+2
+00:00:05,500 --> 00:00:14,000
+In our pipeline, seven specialized agents coordinate: Planner sets the plan, Researcher checks facts, Scriptwriter writes the story,
+
+3
+00:00:14,000 --> 00:00:22,000
+Storyboarder designs shots, Asset Generator creates visuals, Editor builds the edit, and Critic verifies quality.
+
+4
+00:00:22,000 --> 00:00:30,000
+Next, multiple media tracks assemble in lockstep: visual cards, voiceover audio, and burned SubRip captions.
+
+5
+00:00:30,000 --> 00:00:38,000
+Before delivery, the Critic inspects eighteen quality rules. Any caption violation triggers an automated repair loop.
+
+6
+00:00:38,000 --> 00:00:44,000
+The result is a broadcast-ready vertical video, built by AI agents. Come and build with us.

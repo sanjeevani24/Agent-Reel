@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:04,500
+Every AgentReel video begins with a single prompt: your vision, your topic, and your target audience.
+
+2
+00:00:04,500 --> 00:00:20,000
+Seven autonomous agents: Planner, Researcher, Scriptwriter, Storyboarder, Asset Generator, Editor, and Critic.
+
+3
+00:00:20,000 --> 00:00:28,500
+Visual cards, spoken audio, and SubRip captions assembled in lockstep.
+
+4
+00:00:28,500 --> 00:00:37,000
+Critic inspects 18 rules. Any violation triggers an automated repair loop.
+
+5
+00:00:37,000 --> 00:00:43,000
+The result is a broadcast-ready vertical video built by AI agents. Come and build with us.

@@ -1,0 +1,35 @@
+# Environment & Credentials (NEVER commit or share secrets)
+.env
+*.env
+*.pem
+*.key
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python & Testing Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS / OS Metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Thumbs.db
+
+# Intermediate audio / temporary render scratch
+*.aiff
+*.tmp
+scratch/
+
+# Submission packaging artifacts
+submission_ready/
+*.zip

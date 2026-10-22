@@ -1,0 +1,16 @@
+brief_id: P00
+title: "A day at the Agentic AI Lab"
+topic: "A day in the life at the Agentic AI Lab"
+objective: "Create a short promotional video showing what students do in the Agentic AI Lab."
+audience: "Prospective and current engineering students"
+tone: "energetic, friendly, clear"
+duration_target_s: 40
+key_messages:
+  - "Students build working multi-agent AI systems."
+  - "Learning happens by building, testing and improving."
+call_to_action: "Come and build with us."
+must_include: []
+must_avoid:
+  - "unsupported statistics"
+  - "invented contact details"
+data_dir: data

@@ -1,0 +1,32 @@
+1
+00:00:00,000 --> 00:00:05,000
+Step inside the Agentic AI Lab and see a day of creation unfold.
+
+2
+00:00:05,000 --> 00:00:10,000
+Students collaborate at bright workstations, turning ideas into real…
+
+3
+00:00:10,000 --> 00:00:15,000
+Learning happens as they code, test, and continuously improve their agents.
+
+4
+00:00:15,000 --> 00:00:20,000
+Quick iterations spark fresh insights, and each test brings the system closer…
+
+5
+00:00:20,000 --> 00:00:25,000
+The lab buzzes with energy, as ideas flow and teammates share feedback…
+
+6
+00:00:25,000 --> 00:00:30,000
+By the afternoon, prototypes are running, showcasing the power of coordinated…
+
+7
+00:00:30,000 --> 00:00:35,000
+Join us, build your own multi‑agent AI, and shape the future together.
+
+8
+00:00:35,000 --> 00:00:39,000
+Come and build with us.
+

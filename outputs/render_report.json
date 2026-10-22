@@ -1,0 +1,41 @@
+{
+  "brief_id": "P00",
+  "render_status": "rendered",
+  "final_video_path": "outputs/final_video.mp4",
+  "subtitles_path": "outputs/subtitles.srt",
+  "voiceover_path": "assets/generated/P00/voiceover.mp3",
+  "preview_images": [
+    "outputs/preview_1.png",
+    "outputs/preview_2.png",
+    "outputs/preview_3.png"
+  ],
+  "video_metrics": {
+    "duration_s": 39.0,
+    "target_duration_s": 40,
+    "duration_window": [
+      35,
+      45
+    ],
+    "width": 1080,
+    "height": 1920,
+    "aspect_ratio": "9:16",
+    "fps": 30,
+    "video_codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "file_size_bytes": 3207278,
+    "file_size_mb": 3.06,
+    "max_file_mb": 100
+  },
+  "end_card": {
+    "cta": "Come and build with us.",
+    "disclosure": "Created with AI agents — LY Agentic AI Lab",
+    "duration_s": 4.0
+  },
+  "limitations": {
+    "official_sources_in_data": false,
+    "note": "Technical demo render based on brief-grounded facts. Official lab fact sheet document is missing from data/."
+  }
+}

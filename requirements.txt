@@ -1,0 +1,9 @@
+# Pinned to versions tested on Python 3.12.
+openai==3.35.1
+pydantic==2.14.1
+PyYAML==6.0.3
+python-dotenv==1.2.4
+pytest==9.1.1
+# Added in Milestone B:
+Pillow==13.0.0      # placeholder image cards (also used for rendering in Milestone C)
+PyMuPDF==2.0        # reads PDFs in data/ with page numbers (import name: pymupdf)

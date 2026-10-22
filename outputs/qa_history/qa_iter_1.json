@@ -1,0 +1,172 @@
+{
+  "brief_id": "P00",
+  "iteration": 1,
+  "status": "PASS_WITH_WARNINGS",
+  "checks": [
+    {
+      "name": "script duration",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "script timeline",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "segment timing fit",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "fact ids exist",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "claims grounded in facts",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "no invented numbers/contacts",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "LLM claim review",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "LLM safety review",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "shot count 6-10",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "segments covered by shots",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "storyboard duration",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "on-screen text length",
+      "passed": false,
+      "severity": "soft",
+      "detail": "S02: on-screen text must be 1-80 characters (is 93).; S04: on-screen text must be 1-80 characters (is 89).; S05: on-screen text must be 1-80 characters (is 81).; S06: on-screen text must be 1-80 characters (is 81)."
+    },
+    {
+      "name": "disclosure line",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "assets exist",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "assets valid",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "edit plan ready",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "no false video claim",
+      "passed": true,
+      "severity": null,
+      "detail": ""
+    },
+    {
+      "name": "official sources present",
+      "passed": false,
+      "severity": "soft",
+      "detail": "No official source documents were supplied; only brief-provided statements could be used as facts."
+    }
+  ],
+  "issues": [
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S02: on-screen text must be 1-80 characters (is 93).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S02"
+    },
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S04: on-screen text must be 1-80 characters (is 89).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S04"
+    },
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S05: on-screen text must be 1-80 characters (is 81).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S05"
+    },
+    {
+      "code": "ON_SCREEN_TEXT",
+      "severity": "soft",
+      "stage": "storyboarder",
+      "message": "S06: on-screen text must be 1-80 characters (is 81).",
+      "fix_hint": "Use a short, readable caption.",
+      "repairable": true,
+      "location": "S06"
+    },
+    {
+      "code": "SOURCES_ABSENT",
+      "severity": "soft",
+      "stage": "researcher",
+      "message": "No official source documents were supplied; only brief-provided statements could be used as facts.",
+      "fix_hint": "Add faculty documents to data/ and re-run.",
+      "repairable": false,
+      "location": ""
+    }
+  ],
+  "human_review_required": false,
+  "llm_review": {
+    "unsupported_claims": [],
+    "safety_concerns": [],
+    "notes": ""
+  },
+  "summary": "0 blocking issue(s), 5 warning(s).",
+  "repairs_used": 0,
+  "repair_history": [],
+  "final": false
+}
