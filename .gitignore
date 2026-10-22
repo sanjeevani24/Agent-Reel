@@ -32,4 +32,5 @@ scratch/
 
 # Submission packaging artifacts
 submission_ready/
+submission_ready_final/
 *.zip
